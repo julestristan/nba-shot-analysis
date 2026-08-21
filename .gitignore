@@ -1,1 +1,7 @@
 env/
+
+# Datasets
+/data/.
+
+# Jupyter files
+.ipynb_checkpoints/

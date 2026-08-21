@@ -1,0 +1,8 @@
+services:
+  jupyter:
+    build: .
+    container_name: jupyter-csv
+    ports:
+      - "8000:8888"
+    volumes:
+      - .:/app
