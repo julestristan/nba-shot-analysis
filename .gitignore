@@ -2,7 +2,7 @@ env/
 .vscode/
 
 # Datasets
-/data/.
+data/
 
 # Jupyter files
 .ipynb_checkpoints/
