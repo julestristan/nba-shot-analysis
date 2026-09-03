@@ -1,9 +1,9 @@
-**COLONNES**
+# COLONNES
 
 ## Description des variables
 
 | N° | Nom de la colonne | Description | Dispo. a priori | Type | Taux de NA | Gestion des NA | Distribution des valeurs | Remarques |
-|:---:|:---|:---|:---|:---|:---:|:---|:---|:---|
+| :---: | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
 | 1 | `SEASON_1` | Année de fin de saison (2004 = saison 2003‑04) | Oui | int64 | 0 % | — | 22 modalités, 2004→2025 ; ~150 k–220 k lignes/saison | Redondant avec `SEASON_2`. Garder comme feature « effet époque ». |
 | 2 | `SEASON_2` | Libellé de saison `AAAA-AA` | Oui | object | 0 % | — | 22 modalités, `2003-04`→`2024-25` | **Redondant** avec `SEASON_1` → à supprimer. |
 | 3 | `TEAM_ID` | Identifiant de la franchise du tireur | Oui | int64 | 0 % | — | 30 modalités | Clé stable de la franchise. |
@@ -33,12 +33,10 @@
 
 ---
 
-
-
 ## Chiffres clés
 
 | Indicateur | Valeur |
-|---|---|
+| :--- | :--- |
 | **Nombre de lignes (total 22 saisons)** | **4 450 789** |
 | Nombre de colonnes | 26 |
 | Matchs distincts (`GAME_ID`) | 26 453 |
@@ -51,295 +49,74 @@
 
 ---
 
-
-
 ## Redondance
 
----
 | Redondance | Détail | Action étape 2 |
-|---|---|---|
+| :--- | :--- | :--- |
 | `EVENT_TYPE` ↔ `SHOT_MADE` | **0 incohérence** sur 4,45 M lignes → strictement équivalents | garder `SHOT_MADE`, supprimer `EVENT_TYPE` |
 | `ZONE_NAME` ↔ `ZONE_ABB` | correspondance 1:1 (autant de paires que de modalités) | garder une seule |
 | `SEASON_1` ↔ `SEASON_2` | même info, formats différents | garder `SEASON_1` (int) |
 | `BASIC_ZONE` / `ZONE_RANGE` / `ZONE_NAME` | hiérarchie spatiale corrélée à `LOC_X/Y` et `SHOT_DISTANCE` | choisir *soit* les zones *soit* les coordonnées |
 | `SHOT_TYPE` | déductible des zones « 3 » et de la distance | redondant partiel |
+
 ---
 
 ## Valeurs manquantes
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+| Variable | n_null | n_literal_NA | taux_% |
+| :--- | :---: | :---: | :---: |
+| **POSITION_GROUP** | 219 527 | 7 930 | 5,11 |
+| **POSITION** | 219 527 | 7 930 | 5,11 |
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<br>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>n_null</th>
-      <th>n_literal_NA</th>
-      <th>taux_%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>POSITION_GROUP</th>
-      <td>219527.0</td>
-      <td>7930.0</td>
-      <td>5.11</td>
-    </tr>
-    <tr>
-      <th>POSITION</th>
-      <td>219527.0</td>
-      <td>7930.0</td>
-      <td>5.11</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| Idx | SEASON_2 | n_tirs | pos_null | pos_literal_na |
+| :---: | :---: | :---: | :---: | :---: |
+| 0 | 2003-04 | 189 803 | 0 | 0 |
+| 1 | 2004-05 | 197 626 | 0 | 0 |
+| 2 | 2005-06 | 194 314 | 0 | 0 |
+| 3 | 2006-07 | 196 072 | 0 | 0 |
+| 4 | 2007-08 | 200 501 | 0 | 0 |
+| 5 | 2008-09 | 199 030 | 0 | 0 |
+| 6 | 2009-10 | 200 966 | 0 | 0 |
+| 7 | 2010-11 | 199 761 | 0 | 0 |
+| 8 | 2011-12 | 161 205 | 0 | 0 |
+| 9 | 2012-13 | 201 579 | 0 | 399 |
+| 10 | 2013-14 | 204 126 | 0 | 364 |
+| 11 | 2014-15 | 205 550 | 0 | 114 |
+| 12 | 2015-16 | 207 893 | 0 | 0 |
+| 13 | 2016-17 | 209 929 | 0 | 0 |
+| 14 | 2017-18 | 211 707 | 0 | 484 |
+| 15 | 2018-19 | 219 458 | 0 | 686 |
+| 16 | 2019-20 | 188 116 | 0 | 857 |
+| 17 | 2020-21 | 190 983 | 0 | 1 244 |
+| 18 | 2021-22 | 216 722 | 0 | 1 087 |
+| 19 | 2022-23 | 217 220 | 0 | 1 431 |
+| 20 | 2023-24 | 218 701 | 0 | 1 264 |
+| 21 | 2024-25 | 219 527 | 219 527 | 0 |
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>SEASON_2</th>
-      <th>n_tirs</th>
-      <th>pos_null</th>
-      <th>pos_literal_na</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2003-04</td>
-      <td>189803</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2004-05</td>
-      <td>197626</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2005-06</td>
-      <td>194314</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2006-07</td>
-      <td>196072</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2007-08</td>
-      <td>200501</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2008-09</td>
-      <td>199030</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2009-10</td>
-      <td>200966</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2010-11</td>
-      <td>199761</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2011-12</td>
-      <td>161205</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2012-13</td>
-      <td>201579</td>
-      <td>0.0</td>
-      <td>399.0</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2013-14</td>
-      <td>204126</td>
-      <td>0.0</td>
-      <td>364.0</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2014-15</td>
-      <td>205550</td>
-      <td>0.0</td>
-      <td>114.0</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2015-16</td>
-      <td>207893</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2016-17</td>
-      <td>209929</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2017-18</td>
-      <td>211707</td>
-      <td>0.0</td>
-      <td>484.0</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2018-19</td>
-      <td>219458</td>
-      <td>0.0</td>
-      <td>686.0</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2019-20</td>
-      <td>188116</td>
-      <td>0.0</td>
-      <td>857.0</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020-21</td>
-      <td>190983</td>
-      <td>0.0</td>
-      <td>1244.0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2021-22</td>
-      <td>216722</td>
-      <td>0.0</td>
-      <td>1087.0</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2022-23</td>
-      <td>217220</td>
-      <td>0.0</td>
-      <td>1431.0</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2023-24</td>
-      <td>218701</td>
-      <td>0.0</td>
-      <td>1264.0</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2024-25</td>
-      <td>219527</td>
-      <td>219527.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+---
 
 ## Données dupliquées
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+| lignes_en_double | total |
+| :---: | :---: |
+| 398 | 4 450 789 |
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+---
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>lignes_en_double</th>
-      <th>total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>398.0</td>
-      <td>4450789</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+## Remarques et analyses
 
-**LOC=0 à travers les années**
+- **LOC=0 à travers les années**  
+  Les points près du panier sont finement traqués à partir de 2011.  
+  ![Tirs distance 0](./tirs_distance_0.png)
 
-Les points prés du panier sont finement traqués à partir de 2011
-![](./tirs_distance_0.png)
+- **Pas de POSITION / POSITION_GROUP pour 2024/2025**
+- **Saisons écourtées**
+- **Pas de variable HOME / EXT pour le tireur**
+- **Pas de shot clock**
 
-**Pas de POSITION / POSITION_GROUP pour 2024/2025**
-
-**Saisons écourtées**
-
-**Pas de variable HOME / EXT pour le tireur**
-
-**Pas de shooting clock?**
-
-**Distribution des tirs semble cohérente**
-
-![](distribution_shot_distance_2007.png)
-
-![](distribution_shot_distance_2025.png)
-
+- **Distribution des tirs**  
+  La distribution de la distance des tirs semble cohérente sur la durée :  
+  ![Distribution 2007](./distribution_shot_distance_2007.png)  
+  ![Distribution 2025](./distribution_shot_distance_2025.png)
