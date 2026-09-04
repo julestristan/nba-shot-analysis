@@ -6,3 +6,12 @@ env/
 
 # Jupyter files
 .ipynb_checkpoints/
+
+# Extractions API (jamais dans Git)
+data/raw/
+data/interim/
+data/.api_cache/
+
+# Python
+__pycache__/
+*.pyc

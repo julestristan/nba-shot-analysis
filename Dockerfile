@@ -2,10 +2,12 @@ FROM jupyter/scipy-notebook:latest
 
 WORKDIR /app
 
-# Installation des outils pour traiter tes gros CSV
-RUN pip install --no-cache-dir duckdb polars
+# Dependances Python du projet (voir requirements.txt pour le detail
+# des versions et les contraintes de compatibilite).
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Activer JupyterLab par défaut
+# Activer JupyterLab par defaut
 ENV JUPYTER_ENABLE_LAB=yes
 
 # Lancement sans token/mot de passe en dev local

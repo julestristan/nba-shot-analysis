@@ -1,0 +1,22 @@
+# Environnement Python du projet.
+# Versions figees : tout le groupe et le jury doivent obtenir le meme
+# environnement. Combinaison testee avec l'image jupyter/scipy-notebook
+# (pandas 2.1.1, scipy 1.11.3, scikit-learn 1.3.1, matplotlib 3.8.0,
+# seaborn 0.13.0, pyarrow 13.0.0).
+
+# --- Client de l'API stats.nba.com ---
+nba_api==1.11.4
+
+# Impose par nba_api, qui exige numpy>=1.26 (l'image fournit 1.24.4).
+# 1.26.4 est la version la plus haute acceptee par scipy, scikit-learn
+# et matplotlib de l'image, qui exigent tous numpy<2.
+numpy==1.26.4
+
+# L'image fournit numba 0.57.1, qui exige numpy<1.25 : incompatible avec
+# la ligne ci-dessus. 0.59.1 accepte numpy 1.26. Necessaire pour SHAP
+# a l'etape de modelisation.
+numba==0.59.1
+
+# --- Traitement de gros CSV (deja dans l'image, figes ici) ---
+duckdb==1.5.5
+polars==1.44.1
