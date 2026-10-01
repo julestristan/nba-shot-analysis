@@ -8,7 +8,7 @@
 | 1 | Game ID | Identifiant du match | Oui | int64 | 0 | Aucune | 28 817 valeurs distinctes | Identifiant, pas une quantité |
 | 2 | Game Event ID | Numéro de l'événement dans le match | Oui | int64 | 0 | Aucune | 899 valeurs distinctes | (Game ID, Game Event ID) = clé unique du tir (0 doublon, cellule 4) |
 | 3 | Player ID | Identifiant du joueur | Oui | int64 | 0 | Aucune | 2 152 valeurs distinctes | Identifiant |
-| 4 | Player Name | Nom du joueur | Oui | object | 0 | Aucune | 2 143 valeurs distinctes | 2 143 noms pour 2 152 ID : à examiner (homonymes ?) |
+| 4 | Player Name | Nom du joueur | Oui | object | 0 | Aucune | 2 143 valeurs distinctes | 9 noms portés par 2 joueurs (homonymes) ; aucun des 25 ESPN concerné → utiliser Player ID |
 | 5 | Team ID | Identifiant de l'équipe du tireur | Oui | int64 | 0 | Aucune | 30 valeurs distinctes | Identifiant stable ; clé de jointure avec les autres tables Kaggle |
 | 6 | Team Name | Nom de l'équipe | Oui | object | 0 | Aucune | 37 valeurs distinctes | 6 franchises renommées ou déménagées (Seattle→OKC, Vancouver→Memphis, NJ→Brooklyn, Hornets/Bobcats/Pelicans, LA Clippers) → utiliser Team ID (cellule 10) |
 | 7 | Period | Quart-temps ; 5 à 8 = prolongations | Oui | int64 | 0 | Aucune | 1 : 26,2 % · 2 : 24,9 % · 3 : 24,5 % · 4 : 23,6 % · 5 : 0,6 % · 6 : 0,1 % · 7, 8 : < 0,1 % | Prolongations = 0,7 % des tirs, à regrouper |
