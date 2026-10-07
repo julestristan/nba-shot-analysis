@@ -1,0 +1,177 @@
+{
+  "fig_rupture_panier": {
+    "p1": 0.7782849149362105,
+    "p2": 0.05744548637393939,
+    "diff_pts": 72.08394285622711,
+    "ic95_pts": 0.1304963944061901,
+    "z": 879.9420464384648,
+    "p_value": 0.0,
+    "n1": 446077,
+    "n2": 959118,
+    "part_avant": 0.7782849149362105,
+    "part_apres": 0.05744548637393939,
+    "tirs_concernes_avant": 347175
+  },
+  "fig_echelle_distance": {
+    "saisons_corrigees": [
+      2020,
+      2021,
+      2022
+    ],
+    "mae_avant_saisons_corrigees": {
+      "2020": 11.693056308086716,
+      "2021": 11.878909357076873,
+      "2022": 12.041749280122705
+    },
+    "mae_apres_saisons_corrigees": {
+      "2020": 0.5073136027325408,
+      "2021": 0.4916472007101476,
+      "2022": 0.49425561599949897
+    },
+    "mae_max_apres": 0.5073136027325408,
+    "lignes_corrigees": 595821
+  },
+  "fig_shotchart_correction": {
+    "saison": "2020-21",
+    "etendue_y_brute": [
+      5.335,
+      13.645
+    ],
+    "etendue_y_corrigee": [
+      0.8,
+      90.5
+    ]
+  },
+  "fig_couverture_joueurs": {
+    "retenus": [
+      "Chris Paul",
+      "Kawhi Leonard",
+      "Luka Doncic",
+      "Kevin Durant",
+      "Anthony Davis",
+      "Nikola Jokic",
+      "Stephen Curry",
+      "Giannis Antetokounmpo",
+      "LeBron James",
+      "James Harden",
+      "Russell Westbrook"
+    ],
+    "exclus": [
+      "Draymond Green"
+    ],
+    "tirs_retenus": 119506
+  },
+  "fig_reussite_geste": {
+    "chi2": 144499.85299524918,
+    "ddl": 5,
+    "p_value": 0.0,
+    "v_cramer": 0.2623586043394013,
+    "reussite": {
+      "jump_simple": 0.3563,
+      "jump_cree": 0.4255,
+      "hook": 0.4822,
+      "layup": 0.5595,
+      "tip_putback": 0.6031,
+      "dunk": 0.8962
+    },
+    "n": {
+      "jump_simple": 786995,
+      "jump_cree": 564420,
+      "hook": 68421,
+      "layup": 488359,
+      "tip_putback": 84847,
+      "dunk": 106269
+    }
+  },
+  "fig_reussite_distance": {
+    "r_point_biserial": -0.22220541902367874,
+    "p_value": 0.0,
+    "spearman": -0.2382382196132118,
+    "reussite_0_3ft": 0.668283767887942,
+    "reussite_10_20ft": 0.41952106344608675,
+    "reussite_24_27ft": 0.3600679392500459
+  },
+  "fig_effets_contexte": {
+    "fin_de_periode": {
+      "p1": 0.2809089241493167,
+      "p2": 0.46746143282649844,
+      "diff_pts": -18.655250867718177,
+      "ic95_pts": 0.4272993389388523,
+      "z": -77.30903719094415,
+      "p_value": 0.0,
+      "n1": 43612,
+      "n2": 2055699
+    },
+    "premier_tir_match": {
+      "p1": 0.4512645942459622,
+      "p2": 0.46519617981497996,
+      "diff_pts": -1.3931585569017746,
+      "ic95_pts": 0.2105985584929302,
+      "z": -12.941990454779518,
+      "p_value": 2.6078415490387235e-38,
+      "n1": 242647,
+      "n2": 1856664
+    },
+    "prolongation": {
+      "p1": 0.4197906904092471,
+      "p2": 0.46385466236154493,
+      "diff_pts": -4.406397195229783,
+      "ic95_pts": 0.8575280428602272,
+      "z": -9.968109609636574,
+      "p_value": 2.1019124445952782e-23,
+      "n1": 12804,
+      "n2": 2086507
+    },
+    "back_to_back": {
+      "p1": 0.4590637545149297,
+      "p2": 0.46457780940072896,
+      "diff_pts": -0.5514054885799258,
+      "ic95_pts": 0.17553266441179635,
+      "z": -6.153607227782895,
+      "p_value": 7.574012593216854e-10,
+      "n1": 377636,
+      "n2": 1721675
+    },
+    "domicile": {
+      "p1": 0.4677182150301711,
+      "p2": 0.4594573232977313,
+      "diff_pts": 0.8260891732439768,
+      "ic95_pts": 0.13491127944982345,
+      "z": 12.001073042338232,
+      "p_value": 3.507196318296835e-33,
+      "n1": 1049183,
+      "n2": 1050128
+    }
+  },
+  "fig_auc_univariee": {
+    "lr3_auc_val": 0.6368898977367049,
+    "lr_complete_auc_val": 0.6541336861074508,
+    "lr_complete_auc_test_temporel": 0.6441839815495888,
+    "verdict": "aucune fuite detectee",
+    "features_suspectes": [],
+    "auc_max_univariee": 0.6401
+  },
+  "fig_derive_temporelle": {
+    "part3_debut": 0.1869991517520798,
+    "part3_fin": 0.42115092904289675,
+    "fg_debut": 0.4386390099208126,
+    "fg_fin": 0.46721360014941216,
+    "spearman_part3_saison": 0.9841897233201583,
+    "p_value": 1.6500961302732843e-16
+  },
+  "fig_ablation": {
+    "auc_par_etape": {
+      "Géométrie (distance, angle, zone)": 0.6388627898813535,
+      "+ geste": 0.6638290263384715,
+      "+ contexte de match": 0.6675296470083638,
+      "+ joueur et séquence": 0.6700367000575498,
+      "+ adresse au-delà de l'attendu": 0.6712749466163012
+    },
+    "auc_regression_logistique": 0.6532653937765002,
+    "auc_test_temporel": 0.6562074223309501
+  },
+  "fig_calibration_joueurs": {
+    "biais_abs_moyen_sans_joueur_pts": 3.273636363636363,
+    "biais_abs_moyen_avec_adresse_pts": 1.710909090909089
+  }
+}

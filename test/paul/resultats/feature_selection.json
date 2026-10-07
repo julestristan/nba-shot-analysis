@@ -1,0 +1,120 @@
+{
+  "auc_reference": 0.6707465881723985,
+  "importance": {
+    "ACTION_TYPE": 0.09722239664357152,
+    "distance_ft": 0.0511274357359745,
+    "reussite_tirs_precedents": 0.013509432964635082,
+    "tirs_deja_pris": 0.006270709501636329,
+    "equipe": 0.0034493540598049544,
+    "BASIC_ZONE": 0.0030623173744580567,
+    "adversaire": 0.00279508371752607,
+    "POSITION": 0.0022332962748010665,
+    "temps_restant_periode_s": 0.0020771747361919557,
+    "saisons_depuis_premiere_apparition": 0.002015332940843717,
+    "angle_deg": 0.0016773721862349267,
+    "LOC_Y": 0.0016279783743745613,
+    "temps_ecoule_match_s": 0.001272239330561753,
+    "domicile": 0.0006081961207576869,
+    "premier_tir_match": 0.0006019689122265803,
+    "geste_famille": 0.0003032142257616277,
+    "LOC_X": 0.0001555093214595793,
+    "tir_backcourt": 0.00011234700717993595,
+    "en_course": 0.00010780409948185632,
+    "premier_match_saison": 5.124971935399625e-05,
+    "POSITION_GROUP": 4.158407806831299e-05,
+    "en_desequilibre": 2.8554034810668316e-05,
+    "tir_planche": 1.80025707546827e-05,
+    "jours_repos": 1.4978746125771103e-05,
+    "experience_censuree": 8.940434486459647e-06,
+    "derniere_minute": 2.333064258952522e-06,
+    "QUARTER": 0.0,
+    "fin_de_periode": 0.0,
+    "prolongation": 0.0,
+    "tir_3pts": 0.0,
+    "alley_oop": 0.0,
+    "back_to_back": -4.124412621320239e-06
+  },
+  "sous_ensembles": [
+    {
+      "k": 32,
+      "auc": 0.6707465881723985,
+      "log_loss": 0.6309766030792934,
+      "features": [
+        "distance_ft",
+        "angle_deg",
+        "LOC_X",
+        "LOC_Y",
+        "temps_restant_periode_s",
+        "temps_ecoule_match_s",
+        "QUARTER",
+        "tirs_deja_pris",
+        "reussite_tirs_precedents",
+        "jours_repos",
+        "saisons_depuis_premiere_apparition",
+        "domicile",
+        "fin_de_periode",
+        "derniere_minute",
+        "prolongation",
+        "tir_3pts",
+        "tir_planche",
+        "en_course",
+        "en_desequilibre",
+        "alley_oop",
+        "tir_backcourt",
+        "premier_tir_match",
+        "back_to_back",
+        "premier_match_saison",
+        "experience_censuree",
+        "geste_famille",
+        "ACTION_TYPE",
+        "BASIC_ZONE",
+        "POSITION_GROUP",
+        "POSITION",
+        "equipe",
+        "adversaire"
+      ]
+    },
+    {
+      "k": 12,
+      "auc": 0.6697424860138687,
+      "log_loss": 0.6314123660460118,
+      "features": [
+        "ACTION_TYPE",
+        "distance_ft",
+        "reussite_tirs_precedents",
+        "tirs_deja_pris",
+        "equipe",
+        "BASIC_ZONE",
+        "adversaire",
+        "POSITION",
+        "temps_restant_periode_s",
+        "saisons_depuis_premiere_apparition",
+        "angle_deg",
+        "LOC_Y"
+      ]
+    },
+    {
+      "k": 6,
+      "auc": 0.6643754906060633,
+      "log_loss": 0.6334453282946593,
+      "features": [
+        "ACTION_TYPE",
+        "distance_ft",
+        "reussite_tirs_precedents",
+        "tirs_deja_pris",
+        "equipe",
+        "BASIC_ZONE"
+      ]
+    },
+    {
+      "k": 2,
+      "auc": 0.662559327322163,
+      "log_loss": 0.6343259638122156,
+      "features": [
+        "ACTION_TYPE",
+        "distance_ft"
+      ]
+    }
+  ],
+  "features_retenues_identiques_a_config": true
+}

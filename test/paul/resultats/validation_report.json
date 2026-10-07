@@ -1,0 +1,181 @@
+{
+  "sequence_intra_match": {
+    "tirs": 70344,
+    "tirs_deja_pris_identiques": 1.0,
+    "reussite_tirs_precedents_identiques": 1.0,
+    "ok": true
+  },
+  "temps": {
+    "temps_ecoule_identique": 1.0,
+    "fin_de_periode_identique": 1.0,
+    "ok": true
+  },
+  "jours_repos": {
+    "matchs_equipe": 482,
+    "jours_repos_identiques": 1.0,
+    "ok": true
+  },
+  "domicile": {
+    "matchs_sans_exactement_une_equipe_a_domicile": 0,
+    "part_domicile_min": 0.498161225430619,
+    "part_domicile_max": 0.5003233077150459,
+    "abreviations_avec_plusieurs_noms": {
+      "LAC": [
+        "LA Clippers",
+        "Los Angeles Clippers"
+      ]
+    },
+    "ok": true
+  },
+  "geometrie_zones": {
+    "par_saison": [
+      {
+        "SEASON_1": 2016,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2017,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2018,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2019,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2020,
+        "corrigee": true,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2021,
+        "corrigee": true,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2022,
+        "corrigee": true,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2023,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2024,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      },
+      {
+        "SEASON_1": 2025,
+        "corrigee": false,
+        "ra_ok": 1.0,
+        "coin_ok": 1.0,
+        "arc_ok": 1.0,
+        "coin_gauche_x_negatif": 0.0
+      }
+    ],
+    "ecart_max_corrigees_vs_autres": 0.0,
+    "sens_axe_x_identique": true,
+    "ok": true
+  },
+  "experience": {
+    "experience_identique": 1.0,
+    "censure_identique": 1.0,
+    "ok": true
+  },
+  "selection_joueurs": {
+    "joueurs_retenus": [
+      "Anthony Davis",
+      "Chris Paul",
+      "Giannis Antetokounmpo",
+      "James Harden",
+      "Kawhi Leonard",
+      "Kevin Durant",
+      "LeBron James",
+      "Luka Doncic",
+      "Nikola Jokic",
+      "Russell Westbrook",
+      "Stephen Curry"
+    ],
+    "ok": true
+  },
+  "decoupages": {
+    "par_split": [
+      {
+        "split": "test",
+        "n": 315479,
+        "g": 1795,
+        "fg": 0.4642,
+        "saisons": 10,
+        "joueurs": 1289
+      },
+      {
+        "split": "train",
+        "n": 1468817,
+        "g": 8383,
+        "fg": 0.4634,
+        "saisons": 10,
+        "joueurs": 1429
+      },
+      {
+        "split": "val",
+        "n": 315015,
+        "g": 1797,
+        "fg": 0.4637,
+        "saisons": 10,
+        "joueurs": 1304
+      }
+    ],
+    "matchs_partages": 0,
+    "hachage_reproduit": 1.0,
+    "ecart_max_taux_reussite": 0.0007606212881193786,
+    "ok": true
+  },
+  "schema": {
+    "colonnes_interdites_presentes": [],
+    "colonnes_manquantes": [],
+    "cible_parmi_features": false,
+    "features_avec_nulls": {
+      "reussite_tirs_precedents": 245712
+    },
+    "familles_geste": 6,
+    "ok": true
+  },
+  "tous_ok": true
+}

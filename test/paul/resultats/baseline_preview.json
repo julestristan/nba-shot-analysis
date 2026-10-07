@@ -1,0 +1,205 @@
+{
+  "tailles": {
+    "train": 500000,
+    "val": 300000,
+    "val_12_actifs": 18868
+  },
+  "reference_taux_de_base": {
+    "auc": 0.5,
+    "log_loss": 0.6904692338732428,
+    "brier": 0.248662220224
+  },
+  "regression_logistique": {
+    "auc": 0.6532653937765002,
+    "log_loss": 0.640557050484618,
+    "brier": 0.2257107600076568
+  },
+  "ablation_hgb": [
+    {
+      "auc": 0.6388627898813535,
+      "log_loss": 0.6509893948843296,
+      "brier": 0.22985573103340542,
+      "groupe": "1_geometrie",
+      "nb_features": 7,
+      "iterations": 53
+    },
+    {
+      "auc": 0.6638290263384715,
+      "log_loss": 0.633559502192941,
+      "brier": 0.22265099386721465,
+      "groupe": "2_geste",
+      "nb_features": 13,
+      "iterations": 67
+    },
+    {
+      "auc": 0.6675296470083638,
+      "log_loss": 0.6316683883422898,
+      "brier": 0.22182333322323414,
+      "groupe": "3_contexte_match",
+      "nb_features": 25,
+      "iterations": 79
+    },
+    {
+      "auc": 0.6700367000575498,
+      "log_loss": 0.630616922223168,
+      "brier": 0.22136060660146842,
+      "groupe": "4_joueur_sequence",
+      "nb_features": 32,
+      "iterations": 91
+    }
+  ],
+  "hgb_avec_identite_joueur": {
+    "auc": 0.6700058197664223,
+    "log_loss": 0.6306331804183817,
+    "brier": 0.22136961022493057
+  },
+  "hgb_avec_adresse_hors_attente": {
+    "auc": 0.6712749466163012,
+    "log_loss": 0.6300431875629721,
+    "brier": 0.22108541364546314
+  },
+  "calibration_globale_val": {
+    "reelle": 0.46341666666666664,
+    "predite_hgb": 0.46272083226856864
+  },
+  "hgb_test_temporel": {
+    "auc": 0.6562074223309501,
+    "log_loss": 0.6373167667853054,
+    "brier": 0.22431767651434625
+  },
+  "par_joueur_actif": [
+    {
+      "joueur": "Giannis Antetokounmpo",
+      "tirs_val": 2087,
+      "reussite_reelle": 0.5376,
+      "predite_sans_joueur": 0.5665,
+      "predite_identite_brute": 0.5705,
+      "predite_adresse_hors_attente": 0.5495,
+      "auc": 0.8047,
+      "auc_adresse_hors_attente": 0.807,
+      "logloss": 0.5359,
+      "logloss_adresse_hors_attente": 0.5319
+    },
+    {
+      "joueur": "LeBron James",
+      "tirs_val": 1774,
+      "reussite_reelle": 0.5169,
+      "predite_sans_joueur": 0.5196,
+      "predite_identite_brute": 0.5268,
+      "predite_adresse_hors_attente": 0.5257,
+      "auc": 0.7311,
+      "auc_adresse_hors_attente": 0.7279,
+      "logloss": 0.5949,
+      "logloss_adresse_hors_attente": 0.597
+    },
+    {
+      "joueur": "Anthony Davis",
+      "tirs_val": 1680,
+      "reussite_reelle": 0.5286,
+      "predite_sans_joueur": 0.525,
+      "predite_identite_brute": 0.5239,
+      "predite_adresse_hors_attente": 0.5207,
+      "auc": 0.715,
+      "auc_adresse_hors_attente": 0.7176,
+      "logloss": 0.5959,
+      "logloss_adresse_hors_attente": 0.5943
+    },
+    {
+      "joueur": "Russell Westbrook",
+      "tirs_val": 1870,
+      "reussite_reelle": 0.4225,
+      "predite_sans_joueur": 0.4808,
+      "predite_identite_brute": 0.4759,
+      "predite_adresse_hors_attente": 0.4442,
+      "auc": 0.702,
+      "auc_adresse_hors_attente": 0.6942,
+      "logloss": 0.6273,
+      "logloss_adresse_hors_attente": 0.6252
+    },
+    {
+      "joueur": "James Harden",
+      "tirs_val": 2065,
+      "reussite_reelle": 0.4499,
+      "predite_sans_joueur": 0.4323,
+      "predite_identite_brute": 0.4243,
+      "predite_adresse_hors_attente": 0.4338,
+      "auc": 0.6765,
+      "auc_adresse_hors_attente": 0.6741,
+      "logloss": 0.6354,
+      "logloss_adresse_hors_attente": 0.6345
+    },
+    {
+      "joueur": "Kevin Durant",
+      "tirs_val": 1731,
+      "reussite_reelle": 0.5251,
+      "predite_sans_joueur": 0.4643,
+      "predite_identite_brute": 0.4707,
+      "predite_adresse_hors_attente": 0.4806,
+      "auc": 0.6711,
+      "auc_adresse_hors_attente": 0.6743,
+      "logloss": 0.6443,
+      "logloss_adresse_hors_attente": 0.6397
+    },
+    {
+      "joueur": "Nikola Jokic",
+      "tirs_val": 1654,
+      "reussite_reelle": 0.5593,
+      "predite_sans_joueur": 0.5041,
+      "predite_identite_brute": 0.5048,
+      "predite_adresse_hors_attente": 0.5417,
+      "auc": 0.6678,
+      "auc_adresse_hors_attente": 0.6606,
+      "logloss": 0.6435,
+      "logloss_adresse_hors_attente": 0.6406
+    },
+    {
+      "joueur": "Kawhi Leonard",
+      "tirs_val": 1460,
+      "reussite_reelle": 0.5014,
+      "predite_sans_joueur": 0.4756,
+      "predite_identite_brute": 0.4881,
+      "predite_adresse_hors_attente": 0.5012,
+      "auc": 0.6551,
+      "auc_adresse_hors_attente": 0.652,
+      "logloss": 0.6419,
+      "logloss_adresse_hors_attente": 0.6405
+    },
+    {
+      "joueur": "Luka Doncic",
+      "tirs_val": 1529,
+      "reussite_reelle": 0.4696,
+      "predite_sans_joueur": 0.4282,
+      "predite_identite_brute": 0.4319,
+      "predite_adresse_hors_attente": 0.4428,
+      "auc": 0.6427,
+      "auc_adresse_hors_attente": 0.6383,
+      "logloss": 0.6527,
+      "logloss_adresse_hors_attente": 0.6511
+    },
+    {
+      "joueur": "Stephen Curry",
+      "tirs_val": 1745,
+      "reussite_reelle": 0.4613,
+      "predite_sans_joueur": 0.4374,
+      "predite_identite_brute": 0.4431,
+      "predite_adresse_hors_attente": 0.4476,
+      "auc": 0.6335,
+      "auc_adresse_hors_attente": 0.6377,
+      "logloss": 0.6642,
+      "logloss_adresse_hors_attente": 0.6623
+    },
+    {
+      "joueur": "Chris Paul",
+      "tirs_val": 1273,
+      "reussite_reelle": 0.4588,
+      "predite_sans_joueur": 0.4169,
+      "predite_identite_brute": 0.4203,
+      "predite_adresse_hors_attente": 0.4398,
+      "auc": 0.6242,
+      "auc_adresse_hors_attente": 0.6172,
+      "logloss": 0.6688,
+      "logloss_adresse_hors_attente": 0.6663
+    }
+  ],
+  "duree_s": 49.2
+}

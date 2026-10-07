@@ -1,0 +1,176 @@
+{
+  "univariee": [
+    {
+      "feature": "ACTION_TYPE",
+      "type": "categorielle",
+      "auc": 0.6401
+    },
+    {
+      "feature": "distance_ft",
+      "type": "numerique",
+      "auc": 0.6364
+    },
+    {
+      "feature": "geste_famille",
+      "type": "categorielle",
+      "auc": 0.6273
+    },
+    {
+      "feature": "BASIC_ZONE",
+      "type": "categorielle",
+      "auc": 0.6247
+    },
+    {
+      "feature": "LOC_Y",
+      "type": "numerique",
+      "auc": 0.6141
+    },
+    {
+      "feature": "tir_3pts",
+      "type": "binaire",
+      "auc": 0.5761
+    },
+    {
+      "feature": "en_course",
+      "type": "binaire",
+      "auc": 0.5662
+    },
+    {
+      "feature": "POSITION",
+      "type": "categorielle",
+      "auc": 0.5342
+    },
+    {
+      "feature": "POSITION_GROUP",
+      "type": "categorielle",
+      "auc": 0.5329
+    },
+    {
+      "feature": "en_desequilibre",
+      "type": "binaire",
+      "auc": 0.5175
+    },
+    {
+      "feature": "alley_oop",
+      "type": "binaire",
+      "auc": 0.5102
+    },
+    {
+      "feature": "equipe",
+      "type": "categorielle",
+      "auc": 0.509
+    },
+    {
+      "feature": "temps_restant_periode_s",
+      "type": "numerique",
+      "auc": 0.5084
+    },
+    {
+      "feature": "fin_de_periode",
+      "type": "binaire",
+      "auc": 0.5074
+    },
+    {
+      "feature": "adversaire",
+      "type": "categorielle",
+      "auc": 0.5059
+    },
+    {
+      "feature": "temps_ecoule_match_s",
+      "type": "numerique",
+      "auc": 0.5058
+    },
+    {
+      "feature": "saisons_depuis_premiere_apparition",
+      "type": "numerique",
+      "auc": 0.5045
+    },
+    {
+      "feature": "premier_tir_match",
+      "type": "binaire",
+      "auc": 0.5039
+    },
+    {
+      "feature": "QUARTER",
+      "type": "numerique",
+      "auc": 0.5039
+    },
+    {
+      "feature": "tir_planche",
+      "type": "binaire",
+      "auc": 0.5034
+    },
+    {
+      "feature": "reussite_tirs_precedents",
+      "type": "numerique",
+      "auc": 0.5033
+    },
+    {
+      "feature": "derniere_minute",
+      "type": "binaire",
+      "auc": 0.5024
+    },
+    {
+      "feature": "back_to_back",
+      "type": "binaire",
+      "auc": 0.5023
+    },
+    {
+      "feature": "domicile",
+      "type": "binaire",
+      "auc": 0.5022
+    },
+    {
+      "feature": "LOC_X",
+      "type": "numerique",
+      "auc": 0.502
+    },
+    {
+      "feature": "jours_repos",
+      "type": "numerique",
+      "auc": 0.502
+    },
+    {
+      "feature": "tir_backcourt",
+      "type": "binaire",
+      "auc": 0.502
+    },
+    {
+      "feature": "angle_deg",
+      "type": "numerique",
+      "auc": 0.5018
+    },
+    {
+      "feature": "tirs_deja_pris",
+      "type": "numerique",
+      "auc": 0.5014
+    },
+    {
+      "feature": "prolongation",
+      "type": "binaire",
+      "auc": 0.5005
+    },
+    {
+      "feature": "experience_censuree",
+      "type": "binaire",
+      "auc": 0.5002
+    },
+    {
+      "feature": "premier_match_saison",
+      "type": "binaire",
+      "auc": 0.5002
+    }
+  ],
+  "lr3_auc_val": 0.6368898977367049,
+  "lr_complete_auc_val": 0.6541336861074508,
+  "lr_complete_auc_test_temporel": 0.6441839815495888,
+  "taux_base_val": 0.462695,
+  "tailles_echantillons": {
+    "train": 400000,
+    "val": 200000,
+    "train_temporel": 400000,
+    "test_temporel": 200000
+  },
+  "features_suspectes": [],
+  "verdict": "aucune fuite detectee"
+}
