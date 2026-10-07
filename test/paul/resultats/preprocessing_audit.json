@@ -1,0 +1,332 @@
+{
+  "lignes_brutes": 4450789,
+  "saisons_brutes": 22,
+  "joueurs_bruts": 2265,
+  "event_type_different_de_cible": 0,
+  "joueurs_avec_plusieurs_graphies": 28,
+  "lignes_hors_fenetre": 2350533,
+  "lignes_no_shot": 81,
+  "lignes_apres_base": 2100175,
+  "matchs_avec_2_dates": 1,
+  "matchs_sans_2_equipes": 1,
+  "mae_distance_par_saison_avant": {
+    "2016": 0.4673139703754169,
+    "2017": 0.46865284987655365,
+    "2018": 0.4932125733173802,
+    "2019": 0.49200391125336324,
+    "2020": 11.693056308086682,
+    "2021": 11.878909357076589,
+    "2022": 12.041749280122575,
+    "2023": 0.47868459128293156,
+    "2024": 0.4784090945840492,
+    "2025": 0.48091808119857893
+  },
+  "saisons_echelle_corrompue": [
+    2020,
+    2021,
+    2022
+  ],
+  "mae_distance_par_saison_apres": {
+    "2016": 0.46731397037549854,
+    "2017": 0.4686528498765964,
+    "2018": 0.49321257331738194,
+    "2019": 0.49200391125336257,
+    "2020": 0.5073136027325439,
+    "2021": 0.4916472007101554,
+    "2022": 0.4942556159995028,
+    "2023": 0.47868459128291946,
+    "2024": 0.4784090945840386,
+    "2025": 0.4809180811985775
+  },
+  "lignes_coordonnees_corrigees": 595821,
+  "lignes_dans_groupes_doublons": 193,
+  "lignes_en_trop_doublons": 98,
+  "doublons_tip_putback_conserves": 97,
+  "doublons_supprimes": 1,
+  "incoherences_zone_type": 862,
+  "incoherences_distance_type": 7,
+  "incoherences_union": 863,
+  "lignes_apres_incoherences": 2099311,
+  "position_manquante_avant": 219515,
+  "position_inconnue_apres": 18110,
+  "lignes_clean": 2099311,
+  "equipes_abreviation_ambigue": 0,
+  "equipes_abreviation_introuvable": 0,
+  "selection_joueurs": [
+    {
+      "rang_espn": 1,
+      "joueur": "LeBron James",
+      "tirs": 12532,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 2,
+      "joueur": "Kobe Bryant",
+      "tirs": 1113,
+      "saisons": 1,
+      "derniere_saison": 2016,
+      "retenu": false
+    },
+    {
+      "rang_espn": 3,
+      "joueur": "Stephen Curry",
+      "tirs": 11745,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 4,
+      "joueur": "Tim Duncan",
+      "tirs": 441,
+      "saisons": 1,
+      "derniere_saison": 2016,
+      "retenu": false
+    },
+    {
+      "rang_espn": 6,
+      "joueur": "Kevin Garnett",
+      "tirs": 115,
+      "saisons": 1,
+      "derniere_saison": 2016,
+      "retenu": false
+    },
+    {
+      "rang_espn": 7,
+      "joueur": "Nikola Jokic",
+      "tirs": 11140,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 8,
+      "joueur": "Dwyane Wade",
+      "tirs": 3778,
+      "saisons": 4,
+      "derniere_saison": 2019,
+      "retenu": false
+    },
+    {
+      "rang_espn": 9,
+      "joueur": "Kevin Durant",
+      "tirs": 10152,
+      "saisons": 9,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 10,
+      "joueur": "Dirk Nowitzki",
+      "tirs": 2924,
+      "saisons": 4,
+      "derniere_saison": 2019,
+      "retenu": false
+    },
+    {
+      "rang_espn": 11,
+      "joueur": "Giannis Antetokounmpo",
+      "tirs": 12463,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 13,
+      "joueur": "James Harden",
+      "tirs": 12700,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 15,
+      "joueur": "Chris Paul",
+      "tirs": 7632,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 16,
+      "joueur": "Kawhi Leonard",
+      "tirs": 8335,
+      "saisons": 9,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 17,
+      "joueur": "Manu Ginobili",
+      "tirs": 1336,
+      "saisons": 3,
+      "derniere_saison": 2018,
+      "retenu": false
+    },
+    {
+      "rang_espn": 19,
+      "joueur": "Anthony Davis",
+      "tirs": 10709,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 21,
+      "joueur": "Tony Parker",
+      "tirs": 2130,
+      "saisons": 4,
+      "derniere_saison": 2019,
+      "retenu": false
+    },
+    {
+      "rang_espn": 22,
+      "joueur": "Draymond Green",
+      "tirs": 4816,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": false
+    },
+    {
+      "rang_espn": 23,
+      "joueur": "Russell Westbrook",
+      "tirs": 12779,
+      "saisons": 10,
+      "derniere_saison": 2025,
+      "retenu": true
+    },
+    {
+      "rang_espn": 24,
+      "joueur": "Pau Gasol",
+      "tirs": 2320,
+      "saisons": 4,
+      "derniere_saison": 2019,
+      "retenu": false
+    },
+    {
+      "rang_espn": 25,
+      "joueur": "Luka Doncic",
+      "tirs": 9319,
+      "saisons": 7,
+      "derniere_saison": 2025,
+      "retenu": true
+    }
+  ],
+  "espn_absents_de_la_fenetre": [
+    "Shaquille O'Neal",
+    "Steve Nash",
+    "Jason Kidd",
+    "Allen Iverson",
+    "Ray Allen"
+  ],
+  "joueurs_projet": [
+    "LeBron James",
+    "Stephen Curry",
+    "Nikola Jokic",
+    "Kevin Durant",
+    "Giannis Antetokounmpo",
+    "James Harden",
+    "Chris Paul",
+    "Kawhi Leonard",
+    "Anthony Davis",
+    "Russell Westbrook",
+    "Luka Doncic"
+  ],
+  "lignes_seq_egalite_temps": 1658,
+  "lignes_shots": 2099311,
+  "controles": {
+    "cible_hors_0_1": 0,
+    "lignes_dupliquees_rid": 0,
+    "nulls_distance": 0,
+    "nulls_angle": 0,
+    "nulls_domicile": 0,
+    "nulls_jours_repos": 0,
+    "nulls_geste": 0,
+    "temps_hors_bornes": 0,
+    "domicile_incoherent": 0,
+    "hors_fenetre": 0,
+    "coordonnees_non_fiables": 0,
+    "experience_negative": 0,
+    "match_dans_plusieurs_splits": 0
+  },
+  "repartition_split": {
+    "test": 315479,
+    "train": 1468817,
+    "val": 315015
+  },
+  "repartition_split_temps": {
+    "test": 219515,
+    "train": 1661116,
+    "val": 218680
+  },
+  "taux_reussite_global": 0.4635859098532804,
+  "taux_reussite_par_split": {
+    "test": 0.4642,
+    "train": 0.4634,
+    "val": 0.4637
+  },
+  "lignes_par_saison": {
+    "2016": 207854,
+    "2017": 209864,
+    "2018": 211599,
+    "2019": 219313,
+    "2020": 188013,
+    "2021": 190888,
+    "2022": 216512,
+    "2023": 217073,
+    "2024": 218680,
+    "2025": 219515
+  },
+  "familles_geste": {
+    "jump_simple": {
+      "n": 786995,
+      "reussite": 0.3563
+    },
+    "jump_cree": {
+      "n": 564420,
+      "reussite": 0.4255
+    },
+    "layup": {
+      "n": 488359,
+      "reussite": 0.5595
+    },
+    "dunk": {
+      "n": 106269,
+      "reussite": 0.8962
+    },
+    "tip_putback": {
+      "n": 84847,
+      "reussite": 0.6031
+    },
+    "hook": {
+      "n": 68421,
+      "reussite": 0.4822
+    }
+  },
+  "nb_action_type_distincts": 52,
+  "lignes_fin_de_periode": 43612,
+  "reussite_fin_de_periode": 0.2809089241493167,
+  "reussite_hors_fin_de_periode": 0.46746143282649844,
+  "reussite_domicile": 0.4677182150301711,
+  "reussite_exterieur": 0.4594573232977313,
+  "reussite_par_jours_repos": {
+    "0": 0.4591,
+    "1": 0.4647,
+    "2": 0.4654,
+    "3": 0.4663,
+    "4": 0.4646,
+    "5": 0.4674,
+    "6": 0.4614,
+    "7": 0.4632
+  },
+  "reussite_tirs_precedents_null": 245712,
+  "nb_joueurs_projet": 11,
+  "tirs_joueurs_projet": 119506,
+  "lignes_shots_clean": 2099311,
+  "lignes_shots_model": 2099311,
+  "taille_mo_clean": 49.0,
+  "taille_mo_model": 42.5,
+  "duree_s": 34.7
+}
