@@ -1,4 +1,6 @@
-# Rapport d'Exploration des Données
+# Rapport d'Exploration des Données — dataset Kaggle « NBA Shot Locations 1997-2020 » (archive)
+
+Première EDA, réalisée sur le dataset Kaggle avant le choix du dépôt GitHub des 22 saisons ; conservée pour référence. Notebook : `notebooks/archive/eda_kaggle.ipynb` ; figures `output/figures/G1_distance.png`, `G1_joueurs.png`, `G2_geste.png`, `G3_3pts.png`, `G4_moment.png`.
 
 **Nombre de lignes dans la table :** Lignes   : 4,729,512
 **Nombre de colonnes dans la table :** Colonnes : 22

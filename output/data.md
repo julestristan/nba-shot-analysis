@@ -1,4 +1,6 @@
-# COLONNES
+# 🏀 NBA Shot Analysis — Description des données (template du mentor)
+
+Rempli à partir de `notebooks/01_eda.ipynb`, sur la table brute des 22 saisons. Figures dans `output/figures/`.
 
 ## Description des variables
 
@@ -109,7 +111,7 @@
 
 - **LOC=0 à travers les années**  
   Les points près du panier sont finement traqués à partir de 2011.  
-  ![Tirs distance 0](./tirs_distance_0.png)
+  ![Tirs distance 0](./figures/tirs_distance_0.png)
 
 - **Pas de POSITION / POSITION_GROUP pour 2024/2025**
 - **Saisons écourtées**
@@ -118,5 +120,5 @@
 
 - **Distribution des tirs**  
   La distribution de la distance des tirs semble cohérente sur la durée :  
-  ![Distribution 2007](./distribution_shot_distance_2007.png)  
-  ![Distribution 2025](./distribution_shot_distance_2025.png)
+  ![Distribution saison 2004-05](./figures/distribution_shot_distance_2005.png)  
+  ![Distribution toutes saisons](./figures/distribution_shot_distance.png)

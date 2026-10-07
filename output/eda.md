@@ -4,10 +4,11 @@
 
 ## Contexte
 
-- **Source :** *NBA.com* (voir `datasets_ref.md`).
+- **Source :** NBA.com, via le dépôt GitHub `DomSamangy/NBA_Shots_04_25` (voir `datasets_ref.md`).
 - **Périmètre :** 22 saisons **régulières** (playoffs exclus), de **2003‑04** (`NBA_2004`) à **2024‑25** (`NBA_2025`).
 - **Donnée :** 1 ligne = 1 tentative de tir (hors lancers francs).
-- **Fichiers :** 22 CSV `data/NBA_YYYY_Shots.csv`, ~850 Mo, schéma identique (26 colonnes).
+- **Fichiers :** 22 zips `data/shots_04_25/NBA_YYYY_Shots.csv.zip` (un par saison), décompressés dans `data/shots_04_25/csv/` (~890 Mo). Schéma identique, 26 colonnes (24 pour 2024-25, voir « Difficultés »).
+- **Notebook :** `notebooks/01_eda.ipynb` (requêtes DuckDB) ; figures dans `output/figures/`.
 
 ## Chiffres clés
 
@@ -89,15 +90,17 @@
 | 8 | `PLAYER_NAME` (2 286) > `PLAYER_ID` (2 265) : variantes d'orthographe | 🟢 Faible | Clé = `PLAYER_ID` uniquement |
 | 9 | `GAME_DATE` au format texte `MM-DD-YYYY` ; périmètre = **saison régulière seule** | 🟢 Faible | Parsing datetime ; en tenir compte dans l'interprétation |
 
+Le traitement réellement appliqué est documenté dans `preprocessing.md`. Une difficulté supplémentaire, invisible à l'EDA, y est décrite : coordonnées `LOC_X` / `LOC_Y` dix fois trop petites sur les saisons 2019-20 à 2021-22.
+
 ---
 
 ## Data Visualisation
 
-Voir `eda.ipynb` (section 10) — 6 représentations, chacune avec commentaire métier et validation statistique :
+Voir `notebooks/01_eda.ipynb` (section 10) — 6 représentations, figures dans `output/figures/`, chacune avec commentaire métier et validation statistique :
 
-1. **Révolution du 3‑points** (2003‑04 → 2024‑25) — régression linéaire : +1,20 pt/an, R² = 0,94, p ≈ 1,4·10⁻¹³.
-2. **Shot chart** (densité `LOC_X`/`LOC_Y`, saison 2024‑25) — polarisation cercle / arc à 3 pts ; χ² d'ajustement.
-3. **Efficacité vs distance** (FG% et espérance de points par tranche) — le long 2 est économiquement dominé.
-4. **Corner 3 vs above‑the‑break 3** — 38,7 % vs 35,2 %, χ² ≈ 1 357, p ≈ 5·10⁻²⁹⁷.
-5. **Clutch time** — FG% −2,2 pts, part de 3 pts +5 pts ; test de deux proportions, z ≈ −29, p ≈ 3·10⁻¹⁹⁰.
-6. **Profil de tir par poste** — Centres 52,2 % près du cercle vs Arrières 43,4 % à longue distance ; χ² ≈ 15 800 (ddl = 2).
+1. **Révolution du 3‑points** (2003‑04 → 2024‑25) — régression linéaire : +1,20 pt/an, R² = 0,94, p ≈ 1,4·10⁻¹³. Figure `evol_tir_a_3pt.png`.
+2. **Shot chart** (densité `LOC_X`/`LOC_Y`, saison 2024‑25) — polarisation cercle / arc à 3 pts ; χ² d'ajustement. Figure `densité_tirs_sur_court.png`.
+3. **Efficacité vs distance** (FG% et espérance de points par tranche) — le long 2 est économiquement dominé. Figure `fg_pct_et_points_par_tir.png`.
+4. **Corner 3 vs above‑the‑break 3** — 38,7 % vs 35,2 %, χ² ≈ 1 357, p ≈ 5·10⁻²⁹⁷. Figure `réussite_tirs_3_points_par_zone.png`.
+5. **Clutch time** — FG% −2,2 pts, part de 3 pts +5 pts ; test de deux proportions, z ≈ −29, p ≈ 3·10⁻¹⁹⁰. Figure `reussite_clutch_vs_normal.png`.
+6. **Profil de tir par poste** — Centres 52,2 % près du cercle vs Arrières 43,4 % à longue distance ; χ² ≈ 15 800 (ddl = 2). Figure `fg_pct_et_pct_3pt_par_poste.png`.
